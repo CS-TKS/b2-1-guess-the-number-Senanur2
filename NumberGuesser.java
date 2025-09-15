@@ -12,7 +12,7 @@ public class NumberGuesser {
         Scanner inputScanner = new Scanner(System.in);
         Random randomGenerator = new Random();
 
-        // Generates a random number between 0 and 99. Adding 1 makes it 1-100.
+        // Generates a random number between 0 and 99. Adding 1 makes it 1-100
         int numberToGuess = randomGenerator.nextInt(100) + 1;
 
         // 2. Variable Declaration: These will store the user's guess, the count of tries,
