@@ -28,7 +28,7 @@ public class NumberGuesser {
         //    The loop should continue as long as 'hasGuessedCorrectly' is false.
         while (!hasGuessedCorrectly) {
             // TODO: Prompt the user to enter their guess.
-            // Example: System.out.print("Enter your guess: ");
+            System.out.print("Enter a number between 1 and 100: ");
 
 
             // TODO: Read the integer guess from the user using the scanner.
