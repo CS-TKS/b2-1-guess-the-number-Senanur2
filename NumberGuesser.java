@@ -12,7 +12,7 @@ public class NumberGuesser {
         Scanner inputScanner = new Scanner(System.in);
         Random randomGenerator = new Random();
 
-        // Generates a random number between 0 and 99. Adding 1 makes it 1-100
+        // Generates a random number between 0 and 99. Adding 1 makes it 1-100.
         int numberToGuess = randomGenerator.nextInt(100) + 1;
 
         // 2. Variable Declaration: These will store the user's guess, the count of tries,
@@ -30,13 +30,12 @@ public class NumberGuesser {
             // TODO: Prompt the user to enter their guess.
             System.out.print("Enter a number between 1 and 100: ");
 
-
             // TODO: Read the integer guess from the user using the scanner.
             // Hint: userGuess = inputScanner.nextInt();
-
+            userGuess = inputScanner.nextInt();
 
             // TODO: Increment the guess counter.
-
+            guessCount++;
 
             // TODO: Use an if/else-if/else block to check the guess.
             // - If userGuess is greater than numberToGuess, print "Too high, try again."
@@ -44,7 +43,14 @@ public class NumberGuesser {
             // - If they are equal, print the success message and set 'hasGuessedCorrectly' to true.
             //   The success message should be: "Correct! You found the number in [X] tries!"
             //   (Replace [X] with the value of guessCount).
-
+            if (userGuess > numberToGuess) {
+                System.out.println("Too high, try again.");
+            } else if (userGuess < numberToGuess) {
+                System.out.println("Too low, try again.");
+            } else {
+                System.out.println("Correct! You found the number in " + guessCount + " tries!");
+                hasGuessedCorrectly = true;
+            }
         }
 
         // 5. Cleanup: It's good practice to close the scanner when you're done.
